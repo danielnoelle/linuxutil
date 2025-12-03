@@ -140,10 +140,10 @@ class InstallationScreen(Screen):
             id="install-container"
         )
         yield Footer()
-        
+    
     def on_mount(self) -> None:
         """Start installation when screen mounts"""
-        self.install_apps()
+        self.call_later(self.install_apps)
         
     async def install_apps(self) -> None:
         """Install selected applications"""
@@ -198,6 +198,12 @@ class InstallationScreen(Screen):
             border_style="green"
         ))
         
+    def on_button_pressed(self, event: Button.Pressed) -> None:
+        """Handle close button"""
+        if event.button.id == "close-btn":
+            self.app.pop_screen()
+
+
 class AppInstallerApp(App):
     """Main application class"""
     
