@@ -1,0 +1,24 @@
+{
+  "Development": [
+    {
+      "name": "git",
+      "description": "Distributed version control system",
+      "package": "git",
+      "tags": ["vcs", "development", "essential"]
+    },
+    {
+      "name": "vim",
+      "description": "Advanced text editor",
+      "package": "vim",
+      "tags": ["editor", "terminal"]
+    }
+  ],
+  "Multimedia": [
+    {
+      "name": "VLC",
+      "description": "Versatile media player",
+      "package": "vlc",
+      "tags": ["video", "audio", "player"]
+    }
+  ]
+}
